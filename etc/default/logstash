@@ -4,7 +4,8 @@ LS_USER=logstash
 LS_GROUP=adm
 
 # Set heap settings here for Java, and other things like garbage collection
-LS_JAVA_OPTS="-Xms512m -Xmx512m"
+# For Elastic search set the bind Port to Localhost only
+LS_JAVA_OPTS="-Xms512m -Xmx512m -Des.network.host=127.0.0.1"
 
 # logstash log directory
 LOG_DIR=/var/log

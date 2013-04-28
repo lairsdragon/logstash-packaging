@@ -48,7 +48,7 @@ LS_GROUP=adm
 export JAVA_HOME=/usr/lib/jvm/default-java
 
 # Directory where the logstash all in one jar lives
-LS_HOME=/usr/share/logstash
+LS_HOME=/var/lib/logstash
 
 # Additional Java OPTS
 #LS_JAVA_OPTS=
@@ -71,7 +71,7 @@ fi
 
 # Define other required variables
 PID_FILE=/var/run/$NAME.pid
-DAEMON=$LS_HOME/logstash.jar
+DAEMON=/usr/share/logstash/logstash.jar
 DAEMON_OPTS="agent -f ${CONF} --log ${LOG_FILE}"
 
 export LS_MIN_MEM LS_MAX_MEM
